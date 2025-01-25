@@ -76,6 +76,8 @@ i{
 /* ------- BASE -------- */
 body{
     background: var(--body-color);
+    margin: 0;
+    padding: 0;
 }
 .container{
     width: 100%;
@@ -174,6 +176,7 @@ nav{
     width: 50%;
     padding-left: 20px;
 }
+
 .featured-text-card span{
     background: var(--third-color);
     color: var(--color-white);
@@ -181,6 +184,7 @@ nav{
     font-size: 12px;
     border-radius: 5px;
 }
+
 .featured-name{
     font-size: 50px;
     font-weight: 600;
@@ -191,6 +195,7 @@ nav{
     text-transform: capitalize;
     color: var(--text-color-third);
 }
+
 .featured-text-info{
     font-size: 15px;
     margin-bottom: 30px;
@@ -311,6 +316,7 @@ h3{
 
 .phone-university{
     margin-top:3px;
+    text-align: center;
 }
 
 /* ----- ABOUT INFO ----- */
@@ -392,6 +398,27 @@ h3{
 .project-box label{
     font-size: 15px;
     color: #777;
+}
+@media only screen and (max-width: 767px) {
+    .contact-info {
+        padding: 1rem; /* Reduce padding for smaller screens */
+        gap: 0.75rem; /* Maintain spacing between elements */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+    }
+
+    .contact-info > h2 {
+        font-size: 1.25rem; /* Slightly smaller heading */
+        gap: 0.25rem; /* Less space between icon and text */
+    }
+
+    .contact-info > p {
+        font-size: 0.875rem; /* Reduce paragraph font size */
+        gap: 0.25rem; /* Adjust spacing for icons */
+    }
+
+    .contact-info p > i {
+        font-size: 1rem; /* Adjust icon size */
+    }
 }
 .project-box::after, .contact-info::after{
     content: "";
@@ -501,6 +528,24 @@ textarea{
 }
 
 /* ----- FOOTER BOX ----- */
+
+@media only screen and (max-width: 767px) {
+    .middle-footer {
+        padding: 1rem 0; /* Reduce padding for smaller screens */
+    }
+
+    .footer-menu {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center; /* Center align items */
+        gap: 0.5rem; /* Add smaller spacing between links */
+    }
+
+    .footer_menu_list a {
+        font-size: 0.9rem; /* Slightly smaller text for mobile */
+        margin: 0; /* Remove margin for better alignment */
+        text-align: center; /* Center align text */
+    }
+}
 footer{
     display: flex;
     justify-content: center;
@@ -593,11 +638,16 @@ footer{
         margin-top: 2em;
     }
     .featured-image{
-        order: 1;
+        /* order: 1;
         justify-content: center;
         min-height: 150px;
         width: 100%;
-        margin-top: 65px;
+        margin-top: 65px; */
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        min-height: 80vh;
+        width: 100%;
     }
     .image, .image img{
         width: 150px;
@@ -625,6 +675,7 @@ footer{
     }
 
 }
+
 
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
 
@@ -903,3 +954,35 @@ img {
      }
    
   }
+
+ 
+/* Media Query for Mobile (Max Width: 767px) */
+@media only screen and (max-width: 767px) {
+    .featured-text {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .featured-text-card span {
+        font-size: 1rem; /* Slightly smaller title */
+    }
+
+    .featured-name {
+        font-size: 1.25rem; /* Adjust name size */
+    }
+
+    .featured-text-info p {
+        font-size: 0.875rem; /* Reduce font size for mobile */
+        padding: 0 0.5rem;
+    }
+
+    .featured-text-btn .btn {
+        font-size: 0.875rem; /* Reduce button text size */
+        padding: 0.5rem 0.75rem; /* Adjust padding */
+    }
+
+    .social_icons .icon {
+        width: 30px; /* Smaller icons for mobile */
+        height: 30px;
+    }
+}
+
